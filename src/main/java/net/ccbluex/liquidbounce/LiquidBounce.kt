@@ -46,10 +46,10 @@ import kotlin.concurrent.thread
 object LiquidBounce {
 
     // Client information
-    const val CLIENT_NAME = "FDPClient"
-    const val COLORED_NAME = "§c§lFDP§6§lClient"
-    const val CLIENT_CREATOR = "CCBlueX & UnlegitMC"
-    const val CLIENT_WEBSITE = "GetFDP.Today"
+    const val CLIENT_NAME = "BruhBounce"
+    const val COLORED_NAME = "§b§lBruh§d§lBounce"
+    const val CLIENT_CREATOR = "Nobody"
+    const val CLIENT_WEBSITE = "BruhBounce.ontop"
     const val MINECRAFT_VERSION = "1.8.9"
     const val VERSIONTYPE = "Preview"
 
@@ -69,7 +69,7 @@ object LiquidBounce {
     val CLIENT_VERSION = gitInfo["git.commit.id.abbrev"]?.let { "git-$it" } ?: "unknown"
     @JvmField
     val CLIENT_BRANCH = (gitInfo["git.branch"] ?: "unknown").let {
-        if(it == "main") "Main Reborn" else it
+        if(it == "main") "By Sz9K4" else it
     }
 
     var isStarting = true
@@ -197,7 +197,7 @@ object LiquidBounce {
 
     private fun checkUpdate() {
         try {
-            val get = HttpUtils.get("https://api.github.com/repos/UnlegitMC/FDPClient/commits/${gitInfo["git.branch"]}")
+            val get = HttpUtils.get("")
 
             val jsonObj = JsonParser()
                 .parse(get).asJsonObject
